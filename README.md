@@ -1,4 +1,3 @@
----
 **Purpose:**  
 Provide a complete high-level introduction to the Echo project and guide new users.  
 Echo operates fully on local systems by default. It may also be deployed on remote servers or cloud providers; however, hardware isolation, VM snapshots, backup policies, encryption at rest, and physical access controls reside outside Echo’s trust boundary. Deployments outside local/on-prem infrastructure inherently provide lower privacy guarantees.
@@ -17,7 +16,7 @@ New users, contributors, evaluators, architects.
 
 **When to update:**  
 Whenever the project scope changes, architecture evolves, or major features are added.
----
+
 # Echo — Local Multimodal Intelligence Framework
 
 Echo is an open, modular, privacy-first framework for processing and understanding audio and multimodal content entirely on local infrastructure.
