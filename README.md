@@ -1,3 +1,21 @@
+---
+**Purpose:**  
+Provide an overview of the Echo project, its philosophy, its structure, and the key concepts.
+
+**Audience:**  
+New users, evaluators, contributors, and anyone discovering Echo.
+
+**Contents:**  
+- Project description  
+- Core components (Echo, Echo Bot, Echo Modules)  
+- Key features  
+- High-level architecture  
+- Quick start  
+- Links to documentation  
+
+**When to update:**  
+Whenever the project scope changes, architecture evolves, or core features are added.
+---
 # Echo — Local Multimodal Intelligence Framework
 
 Echo is an open, modular, privacy-first framework for processing and understanding audio and multimodal content entirely on local infrastructure.

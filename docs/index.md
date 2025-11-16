@@ -1,4 +1,22 @@
-# Echo Documentation
+---
+**Purpose:**  
+Serve as the main table of contents and entry point for Echo documentation.
+
+**Audience:**  
+All users, developers, and maintainers.
+
+**Contents:**  
+- Overview of documentation sections  
+- Links to architecture, modules, integrations, security, roadmap, etc.  
+
+**When to update:**  
+Whenever new documentation pages are added, removed, or reorganized.
+---
+# Echo Documentation Index
+Purpose: Table of contents and doc navigation entrypoint.
+Audience: Everyone.
+Contents: What is Echo, architecture overview, links to all sections, terminology.
+When to update: Whenever a new doc page is added.
 
 ## 1. Introduction
 - What is Echo?
