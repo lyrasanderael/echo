@@ -1,163 +1,179 @@
 ---
 **Purpose:**  
-Describe Echo’s privacy principles, focusing on local-first processing while clarifying that Echo can run on other environments (servers, datacenters, or cloud) with associated limitations and security considerations.
+Describe Echo’s privacy principles and guarantees, emphasizing the local-first security model while clarifying that Echo can also run on external servers or cloud environments with reduced and limited privacy guarantees.  
+Echo operates fully on local systems by default. It may also be deployed on remote servers or cloud providers; however, hardware isolation, VM snapshots, backup policies, encryption at rest, and physical access controls reside outside Echo’s trust boundary. Deployments outside local/on-prem infrastructure inherently provide lower privacy guarantees.
 
 **Audience:**  
-Security teams, compliance officers, system architects, administrators.
+Security teams, compliance officers, administrators, architects, and any user responsible for data protection.
 
 **Contents:**  
-- Local-first privacy model  
-- Optional external deployment (servers, VMs, cloud)  
-- Associated risks and limitations  
-- Data processing categories  
-- User consent and rights  
-- Security expectations and disclaimers  
+- Local-first philosophy  
+- External hosting and associated risks  
+- Data categories processed by Echo  
+- Consent and user transparency  
+- User rights and GDPR considerations  
+- Retention and deletion guarantees  
+- Privacy limitations outside the local trust boundary  
 
 **When to update:**  
-When processing architecture changes, when Echo introduces new data categories, or when deployment options evolve (e.g., additional supported runtimes or cloud models).
+When new modules process new data categories, when hosting recommendations change, when regulatory requirements evolve, or when external deployment models introduce new risks.
 ---
 
 # Privacy Policy
 
-Echo is designed around a **local-first privacy model**, ensuring that all audio, transcripts, embeddings, and summaries remain fully under the user’s control.  
-However, Echo can also be deployed **outside a purely local environment** (e.g., private datacenter, dedicated server, cloud VM).  
-This document clarifies what is protected, what depends on the hosting environment, and which risks must be considered.
+Echo is designed around a **local-first, privacy-by-design architecture**, ensuring that all processing, storage, and inference remain under the user's direct control.  
+However, Echo may also be deployed on **remote servers, enterprise datacenters, or cloud VMs**, where hardware-level and storage-level privacy controls no longer fall exclusively under Echo’s control.
+
+This document explains the privacy guarantees Echo provides—and the limitations that appear when the system is executed outside local or on-prem infrastructure.
 
 ---
 
-## 1. Local-First Philosophy
+## 1. Local-First Privacy Philosophy
 
-Echo is **natively built to run fully on local infrastructure** such as:
+Echo is **natively built to run entirely on local hardware**, such as:
 
-- personal workstation  
-- local server  
-- on-premise GPU node  
-- air-gapped environment  
-- private virtualization or container environment  
+- a personal workstation  
+- an on-prem server or GPU node  
+- an air-gapped machine  
+- a private local VM or Docker host  
+- any self-controlled edge device  
 
 In this mode:
 
-- No data leaves the machine unless explicitly exported  
-- Audio, transcripts, embeddings, summaries, and metadata remain local  
-- Storage, encryption, retention, and access control are under the user's control  
-- No telemetry or analytics are sent externally  
-- No dependency on cloud services for inference (ASR/LLM)
+- No data leaves your environment unless you explicitly export it  
+- All audio, transcripts, embeddings, and summaries remain local  
+- Encryption at rest is fully controlled by the user  
+- No telemetry, analytics, or external calls are made  
+- Raw audio and sensitive artifacts never reach external systems  
 
-This is the **recommended** and **most privacy-preserving** operating mode.
+**This is the recommended mode for maximum confidentiality.**
 
 ---
 
-## 2. Running Echo on Other Environments (Servers, Datacenter, Cloud)
+## 2. Running Echo on Remote or Cloud Infrastructure
 
-Echo can be deployed on:
+Echo can also be executed on:
 
-- a remote server (dedicated or shared)  
-- an enterprise datacenter  
-- a cloud VM (Azure, AWS, GCP, OVH, Hetzner…)  
-- container orchestration (Kubernetes, Nomad, Docker Swarm)  
+- enterprise servers  
+- private cloud infrastructure  
+- public cloud VMs (Azure, AWS, GCP, OVH, Hetzner…)  
+- Kubernetes clusters  
+- remote GPU hosts  
 
-**This is supported, but not fully controlled by Echo.**
-
-In this mode:
+This deployment mode is supported, but with significant caveats.
 
 ### ✔ What Echo still guarantees:
-- No external API calls from Echo itself  
-- No cloud-based inference (unless user chooses optional external models)  
-- Encryption features still available (storage encryption, secrets, configs)  
-- Access logs and processing logs remain internal to the VM/container
+- No outgoing external API calls (unless manually configured)  
+- No cloud inference (unless the user explicitly activates a cloud module)  
+- Encryption features still available  
+- Local access controls inside the VM/container  
 
-### ⚠ What Echo **does not** control:
-- Cloud provider hardware security (CPU/GPU isolation, multi-tenancy risks)  
-- Underlying disk encryption policies  
-- Snapshots or backups performed automatically by the provider  
-- Physical access to servers  
-- Hypervisor-level compromise  
-- Network-layer interception if traffic is not properly secured  
-- Key management outside of Echo’s boundary  
-- Compliance posture of the hosting provider (GDPR, ISO, SOC2…)  
+### ⚠ What Echo does NOT control outside local/on-prem deployments:
+- underlying **hardware isolation**  
+- **disk encryption at rest** (if disabled or provider-managed)  
+- creation of **snapshots** (automatic or invisible to the user)  
+- **hypervisor-level access**  
+- **provider staff** physical access controls  
+- **backup replication** outside your geographic/legal region  
+- network traffic exposure if improperly configured  
 
-### ⚠ Important security disclaimer:
-> Running Echo outside of local/on-prem infrastructure reduces the level of guaranteed privacy,  
-> because storage, hardware, VM snapshots, and encryption at rest may not be under your exclusive control.
+### ⚠ Critical disclaimer  
+> When Echo runs on external or cloud hosting, **privacy guarantees decrease**,  
+> because hardware isolation, VM snapshots, backup retention, and encryption at rest can no longer be assumed.
 
 ---
 
 ## 3. Data Categories Processed by Echo
 
-Depending on modules used, Echo may process:
+Depending on the configuration and modules used, Echo may process:
 
-- raw audio  
-- diarization segments  
-- speaker embeddings  
-- transcripts  
-- summaries, decisions, action items  
-- timestamps and metadata  
-- meeting details (title, start/end time, participants, tags)
+- raw audio streams  
+- speaker diarization segments  
+- embeddings for speaker recognition  
+- full transcripts  
+- structured summaries  
+- detected actions, decisions, risks  
+- meeting metadata (title, time, tags, participants)  
 
-All files and intermediate artifacts are stored **locally**, unless manually exported.
+All these artifacts are:
+
+- **stored locally** when running on local hardware  
+- **stored within the hosted environment** if running remotely  
+
+Echo **never sends any data externally** unless explicitly configured.
 
 ---
 
-## 4. Consent & User Transparency
+## 4. Consent and Transparency
 
 When Echo Bot joins a meeting:
 
-- Participants must be informed (via meeting banners or verbal notice).  
-- For external meetings, explicit consent may be required depending on policies.  
-- Echo does not attempt to circumvent meeting organizer consent rules.
+- Teams will display a **recording/transcription banner** (when policies allow)  
+- Participants must be **informed that audio is being processed**  
+- For external guests, **explicit verbal or written consent** may be required  
+- Echo does not bypass or circumvent consent policies  
 
-Echo processes only the audio that is accessible to it as a participant (bot or technical account).
-
----
-
-## 5. User Rights
-
-In line with privacy and compliance requirements:
-
-- Users may request deletion of transcripts or summaries  
-- Raw audio is subject to strict retention controls  
-- Individuals have the right to access their personal data if processed  
-- Data portability is possible through exports (Markdown, JSON, raw text)
+Echo only processes audio streams that it is legitimately allowed to access.
 
 ---
 
-## 6. Data Retention & Storage Control
+## 5. User Rights (GDPR & Equivalent)
 
-Echo applies retention rules defined in `docs/security/retention.md`.
+Users may request:
 
-When Echo is deployed locally:
+- access to their personal data  
+- correction of inaccuracies  
+- deletion of their information (subject to retention rules)  
 
-- All data lives under user-controlled storage  
-- Encryption keys remain local  
-- The user decides retention and deletion policies  
+Echo enables these rights **only when running locally**, since:
 
-When Echo is deployed elsewhere:
+- data is stored entirely under user control  
+- deletion is fully effective  
 
-- Retention may depend on the hosting environment  
-- Automatic backups or snapshots may make strict deletion impossible  
-- Hosting provider may impose a minimum retention window  
+When Echo is hosted remotely:
 
-Echo cannot guarantee full deletion if the provider keeps infrastructure-level snapshots.
+- deletion may not remove **provider snapshots or backups**  
+- full erasure cannot be guaranteed by Echo
 
 ---
 
-## 7. Summary of Privacy Guarantees
+## 6. Data Retention and Deletion Guarantees
 
-| Deployment Mode | Privacy Level | What You Control | What You Don’t Control |
+Retention rules are defined in `docs/security/retention.md`.
+
+### In local/on-prem deployment:
+- retention is fully enforceable  
+- deletion is complete and final  
+- encryption keys never leave the user's environment  
+
+### In remote/cloud deployment:
+- deletion may not apply to provider snapshots  
+- backups may persist outside Echo’s control  
+- encryption at rest policies may be controlled by the provider  
+
+Echo cannot guarantee full deletion in environments outside the local trust boundary.
+
+---
+
+## 7. Summary of Privacy Implications
+
+| Deployment Mode | Privacy Level | What You Control | What You Don't Control |
 |-----------------|---------------|------------------|-------------------------|
-| **Local (Recommended)** | ⭐⭐⭐⭐⭐ Maximum | Everything | Nothing |
-| **On-prem server** | ⭐⭐⭐⭐ High | Storage, access, encryption | Physical access (shared IT) |
-| **Private cloud** | ⭐⭐⭐ Medium | OS & software | Hypervisor, snapshots, hardware |
-| **Public cloud (VM)** | ⭐⭐ Lower | VM content | Provider hardware, backups |
-| **Public cloud (managed apps)** | ⭐ Minimal | Very limited | Everything below OS layer |
+| **Local (Recommended)** | ⭐⭐⭐⭐⭐ | Everything | Nothing |
+| **On-Prem Server** | ⭐⭐⭐⭐ | Storage, OS, access | Physical rack access |
+| **Private Cloud** | ⭐⭐⭐ | VM, OS | Hypervisor, snapshots |
+| **Public Cloud VM** | ⭐⭐ | OS content | Hardware, encryption at rest |
+| **Managed Cloud Apps** | ⭐ | Minimal | Almost everything |
 
 ---
 
-## 8. Final Disclaimer
+## 8. Final Privacy Disclaimer
 
-> Echo guarantees privacy **only within the boundaries of the system it controls**.  
+> **Echo guarantees privacy only within the boundaries of the environment it controls directly.**  
 >  
-> Any deployment outside local/on-prem infrastructure inherently depends on the privacy, hardware security, snapshot policies, and encryption guarantees of the chosen hosting provider.
+> When Echo is executed outside local or on-prem infrastructure,  
+> privacy guarantees depend entirely on the hosting provider’s isolation, encryption,  
+> snapshot behavior, physical access controls, and governance practices.
 
 ---
 

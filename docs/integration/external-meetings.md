@@ -1,18 +1,21 @@
 ---
 **Purpose:**  
-Explain how Echo handles external meetings using a technical account.
+Explain how Echo handles external meetings through technical accounts.  
+Local execution provides maximum privacy; remote/cloud use depends on provider-side identity and network isolation.
 
 **Audience:**  
-Admins and integrators.
+Integrators and administrators.
 
 **Contents:**  
-- B2B considerations  
+- B2B meeting handling  
 - Technical account strategy  
-- Consent for external users  
+- Consent for externals  
 - Limitations  
 
 **When to update:**  
-When external meeting policies or Teams restrictions evolve.
+When Teams policies or external meeting rules evolve.
 ---
 
 # External Meetings Integration
+
+(Content placeholder)

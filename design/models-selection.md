@@ -1,19 +1,21 @@
 ---
 **Purpose:**  
-Document model selection criteria for Echo.
+Document selection criteria for ASR/LLM models in Echo.  
+Local-first execution ensures model outputs remain private; external hosting depends on provider isolation.
 
 **Audience:**  
-Model engineers, maintainers.
+Model engineers.
 
 **Contents:**  
-- ASR model tiers  
-- LLM choices (Mistral, Mixtral…)  
-- Quantization tiers  
-- Multi-language routing  
+- ASR tiers  
+- LLM tiers  
+- Quantization  
 - Benchmarks  
 
 **When to update:**  
-When models or benchmarks change.
+When new models or benchmarks are introduced.
 ---
 
 # Model Selection
+
+(Content placeholder)

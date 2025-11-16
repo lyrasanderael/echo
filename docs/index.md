@@ -1,17 +1,23 @@
 ---
 **Purpose:**  
-Serve as the main table of contents and entry point for Echo documentation.
+Serve as the main table of contents and entry point for Echo documentation.  
+Echo operates fully on local systems by default, while allowing external deployment with reduced privacy guarantees.
 
 **Audience:**  
 All users, developers, and maintainers.
 
 **Contents:**  
-- Overview of documentation sections  
-- Links to architecture, modules, integrations, security, roadmap, etc.  
+- Overview of documentation  
+- Links to architecture, modules, integrations, security, roadmap  
 
 **When to update:**  
-Whenever new documentation pages are added, removed, or reorganized.
+Whenever documentation sections are added or reorganized.
 ---
+
+# Echo Documentation Index
+
+(Body content placeholder)
+
 # Echo Documentation Index
 Purpose: Table of contents and doc navigation entrypoint.
 Audience: Everyone.

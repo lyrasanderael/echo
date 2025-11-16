@@ -1,6 +1,7 @@
 ---
 **Purpose:**  
-Document the core Echo framework responsible for orchestration and module management.
+Document the core Echo framework responsible for orchestration, pipelines, and module management.  
+Echo is designed as a local-first framework but can run on remote or cloud infrastructure with reduced privacy guarantees, as underlying hardware and storage controls remain outside the trust boundary.
 
 **Audience:**  
 Framework developers and maintainers.
@@ -11,10 +12,11 @@ Framework developers and maintainers.
 - Module registry  
 - Data contracts  
 - Configuration system  
-- Error handling  
 
 **When to update:**  
-When the core framework evolves or when new internal APIs appear.
+When core APIs or orchestration logic evolve.
 ---
 
 # Echo — Core Framework
+
+(Content placeholder)

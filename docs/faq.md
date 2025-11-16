@@ -1,18 +1,21 @@
 ---
 **Purpose:**  
-Answer common questions about Echo.
+Provide answers to recurring questions about Echo.  
+Includes clarifications on local-first execution and external hosting risks.
 
 **Audience:**  
-Users, contributors.
+Users and contributors.
 
 **Contents:**  
-- Setup questions  
-- Feature questions  
+- Setup  
+- Features  
 - Troubleshooting  
-- Known limitations  
+- Local vs external hosting questions  
 
 **When to update:**  
-When recurring questions appear from users or internal teams.
+When common questions accumulate.
 ---
 
 # FAQ
+
+(Content placeholder)

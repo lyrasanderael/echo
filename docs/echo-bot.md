@@ -1,19 +1,22 @@
 ---
 **Purpose:**  
-Describe the Echo Bot agent responsible for joining meetings, recording, analyzing, and publishing outputs.
+Describe the Echo Bot agent responsible for joining meetings, capturing audio, analyzing content, and publishing outputs.  
+Echo Bot is optimized for local execution but can also operate on remote/cloud servers with reduced control over hardware isolation and encryption guarantees.
 
 **Audience:**  
 Bot developers and integrators.
 
 **Contents:**  
-- Bot architecture  
-- Join strategies (internal app / technical account)  
-- Audio capture  
-- Diarization  
-- Output publishing (Teams, files, SharePoint)  
+- Meeting join strategies  
+- Audio capture pipeline  
+- Diarization interaction  
+- Publishing outputs  
+- Local vs external hosting considerations  
 
 **When to update:**  
-When bot behavior, joining logic, or integration capabilities evolve.
+When joining logic, meeting workflows, or audio pipelines evolve.
 ---
 
 # Echo Bot — Meeting Intelligence Agent
+
+(Content placeholder)

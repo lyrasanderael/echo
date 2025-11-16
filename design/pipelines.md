@@ -1,19 +1,21 @@
 ---
 **Purpose:**  
-Define execution pipelines used by Echo (real-time, batch, meeting pipeline).
+Define Echo’s execution pipelines (real-time, batch, meeting pipeline).  
+Pipelines assume local execution, but can run on remote/cloud servers with lower privacy control.
 
 **Audience:**  
 Pipeline designers and integrators.
 
 **Contents:**  
-- Pipeline stages  
-- Configurable steps  
-- Retry & recovery logic  
+- Stage definitions  
+- Retry logic  
 - Engine switching  
 - Performance tuning  
 
 **When to update:**  
-When pipeline logic or stage ordering changes.
+When pipeline architecture changes.
 ---
 
 # Pipelines
+
+(Content placeholder)

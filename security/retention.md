@@ -1,19 +1,21 @@
 ---
 **Purpose:**  
-Define Echo’s data retention rules.
+Define retention policies for Echo data.  
+Retention is fully enforceable only in local/on-prem deployment; external hosting may include provider snapshots outside Echo’s control.
 
 **Audience:**  
-Admins, compliance, security.
+Admins, compliance, security teams.
 
 **Contents:**  
-- Raw audio retention  
+- Audio retention  
 - Transcript retention  
 - Summary retention  
 - Purge mechanisms  
-- Exceptions  
 
 **When to update:**  
-When retention requirements or data categories evolve.
+When retention practices or data categories evolve.
 ---
 
 # Data Retention
+
+(Content placeholder)

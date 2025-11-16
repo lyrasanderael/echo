@@ -1,19 +1,21 @@
 ---
 **Purpose:**  
-Describe compliance posture and mappings (GDPR etc.).
+Explain Echo’s compliance posture and applicable regulatory considerations.  
+Compliance is strongest in local/on-prem deployment; external hosting reduces control over hardware, snapshots, and encryption at rest.
 
 **Audience:**  
-Compliance & governance teams.
+Compliance and governance teams.
 
 **Contents:**  
 - GDPR mapping  
-- DPIA considerations  
+- DPIA notes  
 - Retention logic  
 - Audit logs  
-- Third-party licenses  
 
 **When to update:**  
-When regulations or processing behavior changes.
+When regulations evolve or Echo processes new data categories.
 ---
 
 # Compliance
+
+(Content placeholder)

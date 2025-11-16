@@ -1,20 +1,22 @@
 ---
 **Purpose:**  
-Provide an overview of the Echo project, its philosophy, its structure, and the key concepts.
+Provide a complete high-level introduction to the Echo project and guide new users.  
+Echo operates fully on local systems by default. It may also be deployed on remote servers or cloud providers; however, hardware isolation, VM snapshots, backup policies, encryption at rest, and physical access controls reside outside Echo’s trust boundary. Deployments outside local/on-prem infrastructure inherently provide lower privacy guarantees.
 
 **Audience:**  
-New users, evaluators, contributors, and anyone discovering Echo.
+New users, contributors, evaluators, architects.
 
 **Contents:**  
-- Project description  
-- Core components (Echo, Echo Bot, Echo Modules)  
-- Key features  
-- High-level architecture  
+- Project overview  
+- Local-first + external hosting considerations  
+- Core layers (Echo, Echo Bot, Echo Modules)  
+- Features  
+- Architecture summary  
 - Quick start  
-- Links to documentation  
+- Documentation links  
 
 **When to update:**  
-Whenever the project scope changes, architecture evolves, or core features are added.
+Whenever the project scope changes, architecture evolves, or major features are added.
 ---
 # Echo — Local Multimodal Intelligence Framework
 

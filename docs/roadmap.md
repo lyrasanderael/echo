@@ -1,19 +1,22 @@
 ---
 **Purpose:**  
-Provide a clear roadmap for Echo releases.
+Provide a roadmap for Echo releases.  
+Deployment considerations (local-first vs external) influence prioritization.
 
 **Audience:**  
-Project leads, contributors, users.
+Contributors, project leads, users.
 
 **Contents:**  
 - MVP  
 - V1  
-- V1.1 (B2B)  
+- V1.1  
 - V2  
 - Backlog  
 
 **When to update:**  
-At each release or milestone.
+At each milestone or feature release.
 ---
 
 # Roadmap
+
+(Content placeholder)

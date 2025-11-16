@@ -1,20 +1,22 @@
 ---
 **Purpose:**  
-Describe Echo's global architecture and major data flows.
+Describe Echo’s high-level architecture, components, and data flows.  
+Echo operates fully on local systems by default. It can also run on external servers or cloud providers, but hardware isolation, encryption at rest, VM snapshots, and physical access controls are outside Echo’s trust boundary.
 
 **Audience:**  
-Architects, developers, and technical leads.
+Architects, developers, technical leads.
 
 **Contents:**  
-- High-level architecture  
-- Components & boundaries  
+- Global architecture  
+- Component boundaries  
 - Data pipelines  
 - Trust/security zones  
-- Global sequence diagrams  
+- Sequence diagrams  
 
 **When to update:**  
-When architectural changes occur, new features affect data flows, or new components are added.
+When architecture changes or new global components are added.
 ---
 
 # Architecture
 
+(Content placeholder)
